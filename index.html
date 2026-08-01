@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty Program | Loader Auth</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 139, 253, 0.15);
+            color: #58a6ff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            color: #f0f6fc;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        p {
+            line-height: 1.6;
+            color: #8b949e;
+            margin-bottom: 24px;
+        }
+        .target-box {
+            background: #0d1117;
+            border: 1px solid #21262d;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .target-box span {
+            display: block;
+            font-size: 13px;
+            color: #8b949e;
+            margin-bottom: 4px;
+        }
+        .target-box a {
+            color: #58a6ff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .rules {
+            margin-bottom: 24px;
+        }
+        .rules h2 {
+            font-size: 16px;
+            color: #f0f6fc;
+            margin-bottom: 12px;
+        }
+        .rules ul {
+            list-style: none;
+        }
+        .rules li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #8b949e;
+            font-size: 14px;
+        }
+        .rules li::before {
+            content: "•";
+            color: #238636;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .reward-card {
+            background: linear-gradient(145deg, #1c2128, #161b22);
+            border: 1px solid #30363d;
+            border-left: 4px solid #238636;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 28px;
+        }
+        .reward-card h3 {
+            color: #f0f6fc;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .reward-card p {
+            margin-bottom: 0;
+            font-size: 13px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #238636;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        .btn:hover {
+            background: #2ea043;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="badge">Security Program</span>
+        <h1>Bug Bounty</h1>
+        <p>Мы высоко ценим безопасность нашего сервиса. Если вы обнаружили уязвимость или баг в системе авторизации — сообщите нам и получите денежное вознаграждение.</p>
+
+        <div class="target-box">
+            <span>Объект тестирования:</span>
+            <a href="https://loader-auth.ru/" target="_blank">loader-auth.ru</a>
+        </div>
+
+        <div class="reward-card">
+            <h3>🎁 Награда за нахождение</h3>
+            <p>Размер выплат зависит от критичности найденной уязвимости (RCE, SQLi, Auth Bypass, XSS и др.).</p>
+        </div>
+
+        <div class="rules">
+            <h2>Правила участия:</h2>
+            <ul>
+                <li>Не раскрывайте информацию об уязвимости публично до её исправления.</li>
+                <li>Не проводите DDoS-атаки и социальную инженерию в отношении пользователей.</li>
+                <li>Предоставьте подробный отчет с шагами для воспроизведения бага (PoC).</li>
+            </ul>
+        </div>
+
+        <a href="https://venuszp.xyz" target="_blank" class="btn">Отправить отчет на venuszp.xyz</a>
+    </div>
+
+</body>
+</html>
